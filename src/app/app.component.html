@@ -28,12 +28,23 @@
 
 
 <div class="switch">
-  <span>Switch 1</span>
-  <input id="switch1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" status="OFF" (click)="switch($event)">
-  <label for="switch1"></label>
+  <label class="labelLight">Light 1</label>
+  <span class="labelSwitchIsOff">OFF</span>
+  <div>
+      <input id="switch1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" status="OFF" (click)="switch($event)">
+      <label for="switch1"></label>
+  </div>
+  <span class="labelSwitchIsOn">ON</span>
 </div>
+
+
+
 <div class="switch">
-  <span>Switch 2</span>
-  <input id="switch2" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" status="OFF" (click)="switch($event)">
-  <label for="switch2"></label>
+  <label class="labelLight">Light 2</label>
+  <span class="labelSwitchIsOff">OFF</span>
+  <div>
+      <input id="switch2" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" status="OFF" (click)="switch($event)">
+      <label for="switch2"></label>
+  </div>
+  <span class="labelSwitchIsOn">ON</span>
 </div>
