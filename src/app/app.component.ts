@@ -43,8 +43,8 @@ export class AppComponent {
               const statusCCC = ccc.getAttribute('status');
               if (statusCCC === 'ON') {
                 ccc.setAttribute('status', 'OFF');
-                const ccc1 = document.querySelector('#switch3label');
-                ccc1.control.checked = false;
+                const ccc1: HTMLInputElement  = (<HTMLInputElement>document.querySelector('#switch3label')) as HTMLInputElement;
+                ccc1['control'].checked = false;
               }
             }
         });
@@ -59,8 +59,8 @@ export class AppComponent {
           const statusCCC = ccc.getAttribute('status');
           if (statusCCC === 'ON') {
             ccc.setAttribute('status', 'OFF');
-            const ccc1 = document.querySelector('#switch3label');
-            ccc1.control.checked = false;
+            const ccc1: HTMLInputElement = (<HTMLInputElement>document.querySelector('#switch3label')) as HTMLInputElement;
+            ccc1['control'].checked = false;
           }
         }
       });
@@ -78,8 +78,9 @@ export class AppComponent {
                   if (status === 'ON') {
                     aaa.setAttribute('status', 'OFF');
                     // Do the magic!!!
-                    const aaa1 = document.querySelector('#switch1label');
-                    aaa1.control.checked = false;
+                    const aaa1: HTMLLabelElement  = (<HTMLLabelElement>document.querySelector('#switch1label'));
+                    console.log(typeof aaa1);
+                    aaa1['control'].checked = false;
                   }
                 }
                 if (bbb) {
@@ -87,8 +88,9 @@ export class AppComponent {
                   if (status === 'ON') {
                     bbb.setAttribute('status', 'OFF');
                     // Do the magic!!!
-                    const bbb1 = document.querySelector('#switch2label');
-                    bbb1.control.checked = false;
+                    const bbb1: HTMLLabelElement = (<HTMLLabelElement>document.querySelector('#switch2label'));
+                    bbb1['control'].checked = false;
+                    console.log(typeof bbb1);
                   }
                 }
             }
